@@ -1,0 +1,8 @@
+testing:
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_SUBMODULE_UPDATE_FLAGS: --remote
+  script:
+    - bash testing_repo/test.sh $CI_COMMIT_REF_NAME
+  tags:
+    - cpp
